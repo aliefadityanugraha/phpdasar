@@ -1,0 +1,22 @@
+.parallax-container {
+    height:500px;
+}
+h2{
+    font-size: small;
+}
+h1{
+    font-size: 25px;
+}
+.section img {
+  border-radius: 10px;
+  border-color: aqua;
+  border:5px;
+}
+.body{
+    font-family: 'Courier New', Courier, monospace;
+}
+button{
+    display:inline-block;
+    color:blue;
+    border-radius:5px;
+}
