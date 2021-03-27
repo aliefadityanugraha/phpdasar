@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 
 ?>
 <!DOCTYPE html>
@@ -73,19 +71,19 @@ session_start();
           </li>
           <li>
             <div class="collapsible-header"><i class="material-icons">person</i>Contact</div>
-            <div class="collapsible-body"><span><a href="https://api.whatsapp.com/send?phone=6289510067618">+6289 510 067 618</a></span></div>
+            <div class="collapsible-body"><span><a href="https://api.whatsapp.com/send?phone=6289510067618" target="_blank">+6289 510 067 618</a></span></div>
           </li>
           <li>
             <div class="collapsible-header"><i class="material-icons">language</i>Social Media</div>
             <div class="collapsible-body"><span>
               <ul>
-                <li type="circle"><a href="https://www.facebook.com/">Facebook</a></li>
+                <li type="circle"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
                 <br></br>
-                <li type="circle"><a href="https://www.instagram.com/adityanugraha_05">Instagram</a></li>
+                <li type="circle"><a href="https://www.instagram.com/adityanugraha_05" target="_blank">Instagram</a></li>
                 <br></br>
-                <li type="circle"><a href="https://www.twitter.com/">Twitter</a></li>
+                <li type="circle"><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
                 <br></br>
-                <li type="circle"> <a href="https://www.youtube.com/">Youtube</a></li>
+                <li type="circle"> <a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
               </ul>             
             </span>
           </div>
@@ -109,7 +107,7 @@ session_start();
   </div>
 
     
-  
+  <!-- JAVASCRIPT  -->
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
       const sidenav = document.querySelectorAll('.sidenav');
@@ -118,7 +116,7 @@ session_start();
       M.Collapsible.init(collapsible);
 
       function logindisek(){
-			header("Location:admin.php")
+			header("Location:admin.php?nama=<?=$_GET["nama"]; ?>")
 		}
   </script>
     

@@ -62,7 +62,7 @@ if(isset($_POST["cari"])){
         <a href="#!" class="brand-logo"><i class="material-icons">layers</i>Application Admin</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="logout.php">Logout</a></li>
-		  <li><a href="index.php">Home</a></li>
+		  <li><a href="index.php?nama=<?=$_GET["nama"]; ?>">Home</a></li>
         </ul>
       </div>
     </nav>
@@ -71,13 +71,13 @@ if(isset($_POST["cari"])){
 <div class="row">
 <div class="col m3 s12">
 <div class="card-panel">
-<h2><i class="material-icons">person</i>Welcome <?= $_GET["nama"]; ?></h2>
+<h2><i class="material-icons">person</i>Welcome <?=$_GET["nama"]; ?></h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium neque quibusdam ut rem tempora culpa, adipisci omnis? Non fuga hic explicabo labore praesentium distinctio quo quos, earum, neque cumque ratione enim, eum deserunt. Dolor neque cum inventore nesciunt? Sint nesciunt eligendi iusto quaerat atque accusamus itaque, aliquam labore suscipit sapiente. Accusantium magnam soluta minima aliquam autem eligendi. Accusantium assumenda enim dolorum inventore harum veniam deleniti delectus reiciendis fuga cumque necessitatibus nam perferendis ea eaque eos praesentium totam, doloremque, aspernatur repellendus! Tempora, nesciunt! Porro dolore laudantium aliquid, fuga aliquam similique. Temporibus et eius perspiciatis iste reprehenderit illum deserunt fuga hic.</p>
 
 <table class="centered Highlight">
         <tbody>
           <tr>
-            <td><a href="account.php?nama=<?= $_GET["nama"]; ?>">Manage My Account</a></td>
+            <td><a href="account.php?nama=<?=$_GET["nama"]; ?>">Manage My Account</a></td>
           </tr>
           <tr>
             <td>Alan</td>
@@ -96,7 +96,7 @@ if(isset($_POST["cari"])){
 <h1>DATA SISWA</h1>
 
 <!-- CARI -->
-<a href="tambah.php" > + Tambah Data Siswa</a>
+<a href="tambah.php?nama=<?=$_GET["nama"]; ?>" > + Tambah Data Siswa</a>
 <br></br>
 <!-- CARI COY -->
 <form action="" method="post">
@@ -135,8 +135,8 @@ if(isset($_POST["cari"])){
 	<tr>
 		<td><?= $i ?></td>
 		<td>
-		<a href="edit.php?id=<?= $row ['id']; ?>" >Edit <a/> |
-	    <a href="hapus.php?id=<?= $row ['id']; ?>" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')">Hapus<a/>
+		<a href="edit.php?id=<?= $row ['id']; ?>&nama=<?=$_GET["nama"]; ?>" >Edit <a/> |
+	    <a href="hapus.php?id=<?= $row ['id']; ?>&nama=<?=$_GET["nama"]; ?>" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')">Hapus<a/>
 		</td>
 		<td><?= $row ["id"]; ?></td>
 		<td><?= $row ["nama"]; ?></td>
@@ -172,6 +172,7 @@ if(isset($_POST["cari"])){
 	
 
 </style>
+<script src="js/script.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

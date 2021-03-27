@@ -1,13 +1,12 @@
 <?php
 session_start();
 
+$nama = $_GET["nama"];
 
 if(!isset($_SESSION["login"])){
 	header("Location:login.php");
 	exit;
 }
-
-
 
 require 'function.php';
 
@@ -19,15 +18,15 @@ if(isset($_POST["submit"])){
         echo "
         <script>
             alert('Data berhasil ditambahkan');
-            document.location.href = 'admin.php';
         </script>";
+        header("Location:admin.php?nama=$nama");
     }
     else {
         echo "
         <script>
             alert('Data gagal ditambahkan');
-            document.location.href = 'admin.php';
         </script>";
+        header("Location:admin.php?nama=$nama");
     }
 }
 
@@ -55,8 +54,6 @@ if(isset($_POST["submit"])){
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo"><i class="material-icons">layers</i>Application Admin</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
         </ul>
       </div>
     </nav>

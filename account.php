@@ -40,7 +40,7 @@ if(!isset($_SESSION["login"])){
 <div class="col m3 s12">
 <div class="card-panel">
 <img class="materialboxed" width="230" src="img/person/profile1.jpg" class="responsive-img">
-<h2><i class="material-icons">person</i>Welcome <?= $_GET["nama"]; ?></h2>
+<h2><i class="material-icons">person</i>Welcome <?=$_GET["nama"]; ?></h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium neque quibusdam ut rem tempora culpa, adipisci omnis? Non fuga hic explicabo labore praesentium distinctio quo quos, earum, neque cumque ratione enim, eum deserunt. Dolor neque cum inventore nesciunt? Sint nesciunt eligendi iusto quaerat atque accusamus itaque, aliquam labore suscipit sapiente. Accusantium magnam soluta minima aliquam autem eligendi. Accusantium assumenda enim dolorum inventore harum veniam deleniti delectus reiciendis fuga cumque necessitatibus nam perferendis ea eaque eos praesentium totam, doloremque, aspernatur repellendus! Tempora, nesciunt! Porro dolore laudantium aliquid, fuga aliquam similique. Temporibus et eius perspiciatis iste reprehenderit illum deserunt fuga hic.</p>
 
 <table class="centered Highlight">

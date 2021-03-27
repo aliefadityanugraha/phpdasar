@@ -1,7 +1,7 @@
 <?php
-
-
 session_start();
+
+$nama = $_GET["nama"];
 
 if(!isset($_SESSION["login"])){
 	header("Location:login.php");
@@ -16,15 +16,15 @@ if(hapus($id)>0){
     echo "
         <script>
             alert('Data berhasil dihapus');
-            document.location.href = 'admin.php';
         </script>";
+        header("Location:admin.php?nama=$nama");
 }
     else {
         echo "
         <script>
             alert('Data gagal dihapus');
-            document.location.href = 'admin.php'?name=$_GET["nama"];
         </script>";
+        header("Location:admin.php?nama=$nama");
     }
 
 

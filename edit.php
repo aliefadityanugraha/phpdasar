@@ -2,6 +2,9 @@
 //untuk menggunakkan session kita harus memulainya dengan session_start();
 session_start();
 
+// variabel nama
+$nama = $_GET["nama"];
+
 //jika user belum login maka tidak bisa masuk kehalaman login
 if(!isset($_SESSION["login"])){
 	header("Location:login.php");
@@ -24,15 +27,15 @@ if(isset($_POST["submit"])){
         echo "
         <script>
             alert('Data berhasil diedit');
-            document.location.href = 'admin.php';
         </script>";
+        header("Location:admin.php?nama=$nama");
     }
     else {
         echo "
         <sciprt>
             alert('Data gagal diedit');
-            document.location.href = 'admin.php';
         </sciprt>";
+        header("Location:admin.php?nama=$nama");
     }
 }
 
@@ -60,8 +63,6 @@ if(isset($_POST["submit"])){
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo"><i class="material-icons">layers</i>Application Admin</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
         </ul>
       </div>
     </nav>
